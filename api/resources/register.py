@@ -87,7 +87,6 @@ class RegisterResource(ModelResource):
         required = ['username',
                     'password',
                     'passwordagain',
-                    'email',
                     'firstname',
                     'lastname']
         check_required_params(bundle, required)
@@ -117,7 +116,7 @@ class RegisterResource(ModelResource):
         else:
             username = bundle.data['username']
             password = bundle.data['password']
-            email = bundle.data['email']
+            email = bundle.data['email'] if 'email' in bundle.data else ''
             first_name = bundle.data['firstname']
             last_name = bundle.data['lastname']
 
