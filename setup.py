@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-oppia',
-    version='0.12.16',
+    version='0.12.17',
     packages=[
         'oppia',
         'quiz',
@@ -54,6 +54,7 @@ setup(
         "pytest",
         "pytest-django",
         "django-ses",
-        "openpyxl==3.0.3"
+        "openpyxl==3.0.3",
+        "reportlab==3.5.67"
     ],
 )
